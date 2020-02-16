@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Create a New Event</title>
+</head>
+
+<body>
+<center>
+    <fieldset>
+    <div id="first">
+        <label for="eventType"><b>Event type: </b>
+        <select id="eventType" name="eventType" required onchange="validateDropbox()" required>
+            <option>Choose an Event</option>
+            <option value="Birthday Party">Birthday Party</option>
+            <option value="Conference">Conference</option>
+            <option value="Gala">Gala</option>
+            <option value="Party">Party</option>
+            <option value="Product Launch">Product Launch</option>
+            <option value="Seminar">Seminar</option>
+            <option value="Team Building">Team Building</option>
+            <option value="Trade Show / Expo">Trade Show / Expo</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Workshop">Workshop</option>  
+          </label> 
+          </select>
+
+        <label for ="Event Title"><b>Event Title: </b>
+        <input type="text" name="Event Title" id="eventTitle" required> 
+        </label>
+          
+
+        <label for="Event Date"><b>Event Dates: </b>
+        <input type="date" name="Date From" id="dateFrom" required>  to 
+        <input type="date" name="Date To" id="dateTo" required>
+        </label>
+
+        <label for="Postdate"><b>Posting Date: </b>
+        <input type="date" name="Postdate" id="postDate" required>
+        </label>
+    </div>
+
+    <div id="second">
+             
+        <label for="regRequire">
+        <input type="checkbox" name="check" id="you" value="Check Registration">Is registration required?   
+        </label>  
+            
+        <label for ="familyProgram">
+        <input type="checkbox" name="check" id="you2" value="Check Events associated family">Is this event associated with any Family Programs?    
+        </label>
+
+        <label for="autoEmail">
+        <input type="checkbox" name="check" id="you3" value="Check Registration Completion Receive a Generative Email">Upon Registration Completion, Are Users to Receive an Auto Generated Email?<br>
+        </label>    
+        
+        <label for="contact">
+        <input type="checkbox" name="check" id="you4" value="Check contacts">Is There a Point of Contact?
+        </label>
+
+        <label for="hostingContact">
+        <input type="checkbox" name="check" id="you5" value="Check hosting commant point of contact">Is There a Hosting Command Point of Contact? 
+        </label>
+    </div>
+    <div id="third">
+        
+        <button type="submit" value="Save" onclick="validate()">Submit </button>
+    
+        <button onclick="alert('Changes have been made'), document.getElementById('eventType').value = '', document.getElementById('eventTitle').value = '', document.getElementById('dateFrom').value='',
+        document.getElementById('dateTo').value='', document.getElementById('postDate').value = '', document.getElementById('you').checked = false; document.getElementById('you2').checked = false;
+        document.getElementById('you3').checked = false; document.getElementById('you4').checked = false; document.getElementById('you5').checked = false;">Cancel</button>
+    </div>
+</fieldset>
+</body>
+</center>
+</html>
